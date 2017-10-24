@@ -16,29 +16,29 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.all? {|set|
-    if position_taken?(board, set[0])
-      if board[set[0]] == board[set[1]] && board[set[0]] == board[set[2]]
+  WIN_COMBINATIONS.each {|set|
+    # if position_taken?(board, set[0])
+    #   if board[set[0]] == board[set[1]] && board[set[0]] == board[set[2]]
+    #     return set
+    #   end
+    # end
+    win_index_1 = set[0]
+    win_index_2 = set[1]
+    win_index_3 = set[2]
+  
+    position_1 = board[win_index_1]
+    position_2 = board[win_index_2]
+    position_3 = board[win_index_3]
+  
+    if position_taken?(board, win_index_1)
+      if position_1 == position_2 && position_1 == position_3
         return set
+      else
+        return false
       end
+    else
+      return false
     end
-  #   win_index_1 = set[0]
-  #   win_index_2 = set[1]
-  #   win_index_3 = set[2]
-  #
-  #   position_1 = board[win_index_1]
-  #   position_2 = board[win_index_2]
-  #   position_3 = board[win_index_3]
-  #
-  #   if position_taken?(board, win_index_1)
-  #     if position_1 == position_2 && position_1 == position_3
-  #       return set
-  #     else
-  #       return false
-  #     end
-  #   else
-  #     return false
-  #   end
-  # }
+  }
  }
 end
