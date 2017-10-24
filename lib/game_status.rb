@@ -20,11 +20,7 @@ def won?(board)
     if position_taken?(board, set[0])
       if board[set[0]] == board[set[1]] && board[set[0]] == board[set[2]]
         return set
-      else
-        false
       end
-    else
-      false
     end
   #   win_index_1 = set[0]
   #   win_index_2 = set[1]
@@ -44,5 +40,5 @@ def won?(board)
   #     return false
   #   end
   # }
-
+ }
 end
