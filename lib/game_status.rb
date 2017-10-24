@@ -30,14 +30,14 @@ def won?(board)
     position_2 = board[win_index_2]
     position_3 = board[win_index_3]
 
-    if position_taken?(board, win_index_1)
-      if position_1 == position_2 && position_1 == position_3
+    if position_1 == "X" && position_2 == "X" && position_3 == "X"
         return set
       else
-        return false
-      end
-    else
-      return false
+        if position_1 == "O" && position_2 == "O" && position_3 == "O"
+            return set
+        else 
+          false
+        end
     end
   }
 end
