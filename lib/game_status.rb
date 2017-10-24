@@ -52,3 +52,7 @@ end
 def full?(board)
   board.none?{|slot| slot == " "}
 end
+
+def draw?(board)
+  
+end
