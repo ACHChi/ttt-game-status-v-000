@@ -29,6 +29,7 @@ def won?(board)
       if position_1 == position_2 && position_1 == position_3
         return set[]
       else
+        return false
       end
     end
   }
