@@ -10,7 +10,7 @@ WIN_COMBINATIONS = [
   [6,7,8], # Bottom row
   [0,3,6], # Left
   [1,4,7], # Middle
-  [2.5.8], # right
+  [2,5.8], # right
   [0,4,8], # Diag\
   [2,4,6], # Diag/
 ]
