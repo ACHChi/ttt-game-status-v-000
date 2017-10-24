@@ -52,4 +52,3 @@ end
 def full?(board)
   board.none?{|slot| slot == " "}
 end
-
