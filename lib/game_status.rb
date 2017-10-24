@@ -12,5 +12,5 @@ WIN_COMBINATIONS = [
   [1,4,7], # Middle
   [2,5,8], # right
   [0,4,8], # Diag\
-  [2,4,6], # Diag/
+  [2,4,6] # Diag/
 ]
