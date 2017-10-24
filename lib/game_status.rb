@@ -35,7 +35,7 @@ def won?(board)
       else
         if position_1 == "O" && position_2 == "O" && position_3 == "O"
             return set
-        else 
+        else
           false
         end
     end
