@@ -59,3 +59,7 @@ def draw?(board)
   else
   end
 end
+
+def over?(board)
+  
+end
