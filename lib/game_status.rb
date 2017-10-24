@@ -16,28 +16,21 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.detect {|set|
-    win_index_1 = set[0]
-    win_index_2 = set[1]
-    win_index_3 = set[2]
-
-    position_1 = board[win_index_1]
-    position_2 = board[win_index_2]
-    position_3 = board[win_index_3]
-
-    if position_1 == "X" && position_2 == "X" && position_3 == "X" || position_1 == "O" && position_2 == "O" && position_3 == "O"
-      return set
-    else
-      false
-    end
-    # if position_taken?(board, win_index_1)
-    #   if position_1 == position_2 && position_1 == position_3
-    #     return set
-    #   else
-    #     return false
-    #   end
-    # else
-    #   return false
-    # end
+  # WIN_COMBINATIONS.detect {|set|
+  #   win_index_1 = set[0]
+  #   win_index_2 = set[1]
+  #   win_index_3 = set[2]
+  # 
+  #   position_1 = board[win_index_1]
+  #   position_2 = board[win_index_2]
+  #   position_3 = board[win_index_3]
+  # 
+  #   if position_1 == "X" && position_2 == "X" && position_3 == "X" || position_1 == "O" && position_2 == "O" && position_3 == "O"
+  #     return set
+  #   else
+  #     false
+  #   end
+  WIN_COMBINATIONS.detect { |set| board[set[0]] == board[set[1]]&& board[set[0]] == board[set[2]] && position_taken?(board, set[0]) }
+  end
   }
 end
