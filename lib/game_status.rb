@@ -14,3 +14,15 @@ WIN_COMBINATIONS = [
   [0,4,8], # Diag\
   [2,4,6] # Diag/
 ]
+
+def won?(board)
+  WIN_COMBINATIONS.each{|set|
+    win_index_1 = set[0]
+    win_index_2 = set[1]
+    win_index_3 = set[2]
+
+    position_1 = board[win_index_1]
+    position_2 = board[win_index_2]
+    position_3 = board[win_index_3]
+  }
+end
